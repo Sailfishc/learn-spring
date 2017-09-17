@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="teacher" class="com.sailfish.learnspring.hook.Teacher">
+        <property name="name" value="橙子"/>
+        <property name="age" value="18"/>
+        <property name="smoking" value="true"/>
+     </bean>
+
+    <bean id="teacherProcess" class="com.sailfish.learnspring.hook.TeacherProcesser"/>
+
+
+    <bean id="dataSource2" class="com.sailfish.learnspring.hook.demo2.DataSource">
+        <property name="driver" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="datasourceProcessor" class="com.sailfish.learnspring.hook.demo2.DataSourceProcessor">
+        <!--<property name="env" value="prod"/>-->
+        <property name="env" value="dev"/>
+        <property name="configName" value="${configName}"/>
+    </bean>
+</beans>
