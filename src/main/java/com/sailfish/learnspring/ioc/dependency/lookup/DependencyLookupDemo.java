@@ -1,7 +1,7 @@
-package com.sailfish.learnspring.ioc.dependency;
+package com.sailfish.learnspring.ioc.dependency.lookup;
 
-import com.sailfish.learnspring.ioc.dependency.lookup.Super;
-import com.sailfish.learnspring.ioc.dependency.lookup.User;
+import com.sailfish.learnspring.ioc.dependency.domain.Super;
+import com.sailfish.learnspring.ioc.dependency.domain.User;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;

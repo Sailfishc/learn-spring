@@ -5,13 +5,13 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="user" class="com.sailfish.learnspring.ioc.dependency.lookup.User">
+    <bean id="user" class="com.sailfish.learnspring.ioc.dependency.domain.User">
         <property name="name" value="sailfish"/>
         <property name="age" value="18"/>
     </bean>
 
 
-    <bean id="superUser" class="com.sailfish.learnspring.ioc.dependency.lookup.SuperUser"
+    <bean id="superUser" class="com.sailfish.learnspring.ioc.dependency.domain.SuperUser"
           parent="user"
           primary="true">
         <property name="address" value="北京"/>

@@ -1,4 +1,4 @@
-package com.sailfish.learnspring.ioc.dependency.lookup;
+package com.sailfish.learnspring.ioc.dependency.domain;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
