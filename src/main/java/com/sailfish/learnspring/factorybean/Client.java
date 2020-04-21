@@ -19,7 +19,7 @@ public class Client {
 
 
         //从BeanFactory中获取FactoryBean,以&标识
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-factory-bean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-factory-bean.xml");
         //beanfaactory的getBean()返回的是beanFactory的getObject的对象
         FactoryBean bean = context.getBean("&proxyDB", FactoryBean.class);
         DBOperation object = (DBOperation) bean.getObject();

@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-multi-bean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-multi-bean.xml");
         MultiSimpleBan multiSimpleBean = context.getBean("multiSimpleBean", MultiSimpleBan.class);
         multiSimpleBean.say();
 

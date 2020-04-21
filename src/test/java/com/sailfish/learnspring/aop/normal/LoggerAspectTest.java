@@ -5,18 +5,15 @@ import com.sailfish.learnspring.aop.proxyFactoryBean.BussinessService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * @author sailfish
  * @create 2017-09-11-上午10:01
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-aop-normal.xml")
+@ContextConfiguration(locations = "classpath:META-INF/spring-practice/spring-aop-normal.xml")
 public class LoggerAspectTest {
 
     @Autowired

@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-bean-name-aware.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-bean-name-aware.xml");
         MyBeanNameAware myBeanNameAware = context.getBean("myBeanNameAware", MyBeanNameAware.class); //my name is:myBeanNameAware
     }
 }

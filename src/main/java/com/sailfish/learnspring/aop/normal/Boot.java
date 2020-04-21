@@ -11,7 +11,7 @@ public class Boot {
 
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-aspect.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-aop-aspect.xml");
         UserServiceImpl bean = (UserServiceImpl) context.getBean("userServiceImpl");
         String sailfish = bean.getName("sailfish");
 

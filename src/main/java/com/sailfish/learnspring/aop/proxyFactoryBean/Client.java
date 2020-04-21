@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-proxy-factory-bean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-aop-proxy-factory-bean.xml");
         BussinessService bussiness = context.getBean("proxyFactoryBean", BussinessService.class);
         bussiness.say();
     }

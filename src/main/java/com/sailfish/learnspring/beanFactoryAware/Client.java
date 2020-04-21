@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-bean-factory-aware.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-practice/spring-bean-factory-aware.xml");
         MyBeanFactoryAware myBeanFactoryAware = context.getBean("myBeanFactoryAware", MyBeanFactoryAware.class);
         //belong toorg.springframework.beans.factory.support.DefaultListableBeanFactory@15975490: defining beans [myBeanFactoryAware]; root of factory hierarchy
     }
