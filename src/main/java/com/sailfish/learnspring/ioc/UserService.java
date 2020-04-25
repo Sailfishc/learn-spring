@@ -6,7 +6,6 @@ package com.sailfish.learnspring.ioc;
  */
 public class UserService {
 
-
     public void sayHello(){
         System.out.println("hello springIoc!");
     }
