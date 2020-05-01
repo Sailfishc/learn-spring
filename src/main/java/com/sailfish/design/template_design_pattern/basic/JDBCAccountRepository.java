@@ -1,6 +1,7 @@
-package com.sailfish.design.step03_di;
+package com.sailfish.design.template_design_pattern.basic;
 
 import com.sailfish.design.common.Account;
+import com.sailfish.design.step03_di.AccountRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
