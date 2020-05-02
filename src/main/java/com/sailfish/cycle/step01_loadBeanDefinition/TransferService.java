@@ -2,10 +2,13 @@ package com.sailfish.cycle.step01_loadBeanDefinition;
 
 import com.sailfish.design.factoryBean.IAccountRepository;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author sailfish
  * @create 2020-05-01-8:13 下午
  */
+@Component
 public class TransferService {
 
     IAccountRepository accountRepository;
