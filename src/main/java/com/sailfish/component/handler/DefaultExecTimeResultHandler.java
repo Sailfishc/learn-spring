@@ -5,10 +5,13 @@ import com.sailfish.component.config.ExecTimeMonitorConfig;
 
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author sailfish
  * @create 2020-05-03-12:01 上午
  */
+@Slf4j
 public class DefaultExecTimeResultHandler extends AbstractExecTimeResultHandler {
 
     public DefaultExecTimeResultHandler() {
@@ -24,6 +27,7 @@ public class DefaultExecTimeResultHandler extends AbstractExecTimeResultHandler 
             logTemplate.append("[");
             logTemplate.append("100%");
             logTemplate.append(",").append(execTimeData.getExecTime()).append(",").append("0").append(",").append(execTimeData.getId()).append("]").append(execTimeData.getClassName()).append(".").append(execTimeData.getMethodName()).append(lineSeparator);
+            log.info(logTemplate.toString());
         }
 
     }

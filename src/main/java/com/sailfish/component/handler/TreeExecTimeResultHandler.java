@@ -8,10 +8,13 @@ import java.math.RoundingMode;
 import java.util.Iterator;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author sailfish
  * @create 2020-05-03-12:02 上午
  */
+@Slf4j
 public class TreeExecTimeResultHandler extends AbstractExecTimeResultHandler {
 
     public TreeExecTimeResultHandler() {
@@ -31,6 +34,7 @@ public class TreeExecTimeResultHandler extends AbstractExecTimeResultHandler {
 
                 while(true) {
                     if (i >= execTimeDataList.size()) {
+                        log.info(logTemplate.toString());
                         break;
                     }
 

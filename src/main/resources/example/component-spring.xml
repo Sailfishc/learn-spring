@@ -8,8 +8,11 @@
         http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
+    <context:component-scan base-package="com.sailfish.component"/>
+
+
     <bean id="monitorConfig" class="com.sailfish.component.Monitor">
-        <property name="limitTime" value="500"></property>
+        <property name="limitTime" value="1"></property>
         <property name="monitorType" value="TREE"></property>
         <property name="monitorMybatis" value="false"></property>
         <property name="maxThread" value="5"></property>
@@ -28,15 +31,17 @@
         </property>
     </bean>
 
-    <bean id="personService" class="com.sailfish.example.PersonServiceImpl"/>
+    <bean id="personService" class="com.sailfish.example.PersonServiceImpl" autowire="byName"/>
+    <bean id="personDAO" class="com.sailfish.example.PersonDAO"/>
 
-<!--    <aop:config>-->
-<!--        <aop:advisor advice-ref="execTimeMonitorInterceptor"-->
-<!--                     pointcut="(-->
-<!--                                (-->
-<!--                                execution(* com.sailfish.example.*(..))-->
-<!--                                )-->
-<!--                            )"/>-->
-<!--    </aop:config>-->
+    <aop:config>
+        <aop:advisor advice-ref="execTimeMonitorInterceptor"
+                     pointcut="(
+                                (
+                                execution(* com.sailfish.example.*Service*.*(..))
+                                or execution(* com.sailfish.example.*DAO*.*(..))
+                                )
+                            )"/>
+    </aop:config>
 
 </beans>
