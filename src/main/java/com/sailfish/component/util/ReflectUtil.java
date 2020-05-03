@@ -1,4 +1,4 @@
-package com.sailfish.example.util;
+package com.sailfish.component.util;
 
 import java.lang.reflect.Field;
 

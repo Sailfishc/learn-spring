@@ -1,4 +1,4 @@
-package com.sailfish.example.annotation;
+package com.sailfish.component.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

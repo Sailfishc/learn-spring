@@ -1,7 +1,7 @@
-package com.sailfish.example.handler;
+package com.sailfish.component.handler;
 
-import com.sailfish.example.ExecTimeData;
-import com.sailfish.example.config.ExecTimeMonitorConfig;
+import com.sailfish.component.ExecTimeData;
+import com.sailfish.component.config.ExecTimeMonitorConfig;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.sailfish.example.config;
+package com.sailfish.component.config;
 
 /**
  * @author sailfish

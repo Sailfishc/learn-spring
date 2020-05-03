@@ -1,8 +1,8 @@
-package com.sailfish.example;
+package com.sailfish.component;
 
-import com.sailfish.example.annotation.UnNeedMonitor;
-import com.sailfish.example.config.ExecTimeMonitorConfig;
-import com.sailfish.example.handler.AbstractExecTimeResultHandler;
+import com.sailfish.component.annotation.UnNeedMonitor;
+import com.sailfish.component.config.ExecTimeMonitorConfig;
+import com.sailfish.component.handler.AbstractExecTimeResultHandler;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.AntPathMatcher;

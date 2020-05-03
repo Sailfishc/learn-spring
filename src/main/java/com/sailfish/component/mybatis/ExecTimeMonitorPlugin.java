@@ -1,7 +1,7 @@
-package com.sailfish.example.mybatis;
+package com.sailfish.component.mybatis;
 
-import com.sailfish.example.ExecTimeData;
-import com.sailfish.example.ExecTimeMonitor;
+import com.sailfish.component.ExecTimeData;
+import com.sailfish.component.ExecTimeMonitor;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;

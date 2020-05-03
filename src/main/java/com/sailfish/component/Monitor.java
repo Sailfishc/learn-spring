@@ -1,11 +1,11 @@
-package com.sailfish.example;
+package com.sailfish.component;
 
-import com.sailfish.example.config.ExecTimeMonitorConfig;
-import com.sailfish.example.handler.AbstractExecTimeResultHandler;
-import com.sailfish.example.handler.DefaultExecTimeResultHandler;
-import com.sailfish.example.handler.TreeExecTimeResultHandler;
-import com.sailfish.example.interceptor.ExecTimeMonitorInterceptor;
-import com.sailfish.example.mybatis.ExecTimeMonitorPlugin;
+import com.sailfish.component.config.ExecTimeMonitorConfig;
+import com.sailfish.component.handler.AbstractExecTimeResultHandler;
+import com.sailfish.component.handler.DefaultExecTimeResultHandler;
+import com.sailfish.component.handler.TreeExecTimeResultHandler;
+import com.sailfish.component.interceptor.ExecTimeMonitorInterceptor;
+import com.sailfish.component.mybatis.ExecTimeMonitorPlugin;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -28,10 +28,9 @@ public class Monitor {
     private Integer maxThread = null;
     private boolean limitEntry;
     private String[] limitEntryPaths;
-    @Autowired(required = false)
+
     private SqlSessionFactory sqlSessionFactory;
 
-    @Autowired(required = false)
     private ExecTimeMonitor execTimeMonitor;
 
 
@@ -142,5 +141,15 @@ public class Monitor {
 
     public void setLimitEntryPaths(String[] limitEntryPaths) {
         this.limitEntryPaths = limitEntryPaths;
+    }
+
+    @Autowired(required = false)
+    public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
+        this.sqlSessionFactory = sqlSessionFactory;
+    }
+
+    @Autowired(required = false)
+    public void setExecTimeMonitor(ExecTimeMonitor execTimeMonitor) {
+        this.execTimeMonitor = execTimeMonitor;
     }
 }

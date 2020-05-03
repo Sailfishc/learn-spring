@@ -1,7 +1,7 @@
-package com.sailfish.example.interceptor;
+package com.sailfish.component.interceptor;
 
-import com.sailfish.example.ExecTimeData;
-import com.sailfish.example.ExecTimeMonitor;
+import com.sailfish.component.ExecTimeData;
+import com.sailfish.component.ExecTimeMonitor;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
@@ -26,16 +26,16 @@ public class ExecTimeMonitorInterceptor implements MethodInterceptor {
             String methodName = method.getName();
             ExecTimeData execTimeData = null;
 
-            Object var8;
+            Object result;
             try {
                 execTimeData = this.execTimeMonitor.initExecTimeData(className, methodName);
                 this.execTimeMonitor.startMonitor(className, methodName, execTimeData);
-                var8 = invocation.proceed();
+                result = invocation.proceed();
             } finally {
                 this.execTimeMonitor.stopMonitor(execTimeData);
             }
 
-            return var8;
+            return result;
         } else {
             return invocation.proceed();
         }
