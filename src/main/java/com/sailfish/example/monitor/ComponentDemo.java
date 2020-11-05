@@ -1,4 +1,4 @@
-package com.sailfish.example;
+package com.sailfish.example.monitor;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package com.sailfish.example;
+package com.sailfish.example.monitor;
 
 /**
  * @author sailfish

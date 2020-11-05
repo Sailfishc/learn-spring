@@ -1,4 +1,4 @@
-package com.sailfish.example;
+package com.sailfish.example.monitor;
 
 import java.util.concurrent.TimeUnit;
 

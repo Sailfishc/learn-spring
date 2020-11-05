@@ -31,8 +31,8 @@
         </property>
     </bean>
 
-    <bean id="personService" class="com.sailfish.example.PersonServiceImpl" autowire="byName"/>
-    <bean id="personDAO" class="com.sailfish.example.PersonDAO"/>
+    <bean id="personService" class="com.sailfish.example.monitor.PersonServiceImpl" autowire="byName"/>
+    <bean id="personDAO" class="com.sailfish.example.monitor.PersonDAO"/>
 
     <aop:config>
         <aop:advisor advice-ref="execTimeMonitorInterceptor"
